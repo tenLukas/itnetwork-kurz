@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+  
+  body {
+    color: #263238;
+  }
+  
+  h2 {
+    padding-left: 3rem;
+    padding-top: 1rem;
+
+  }
+
+  header h2 {
+    background-color: #04AA6D;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    border: #f3f3f3 solid 0.1rem;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+  
+  li a.active {
+    color: white;
+    background-color: #04AA6D;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width: 280px) {
+    nav {
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    header h2 {
+      height: 4rem;
+    }
+  }
+  
+  /* Styly pro tabulku */
+  #pojistenecTable {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  #pojistenecTable thead {
+    background-color: #f3f3f3;
+  }
+  
+  #pojistenecTable th,
+  #pojistenecTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Styly pro formulář */
+  #pridatPojistence {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  
+  #pridatPojistence input[type="text"],
+  #pridatPojistence button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #pridatPojistence button {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  #pridatPojistence button:hover {
+    background-color: #038857;
+  }
+  
