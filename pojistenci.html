@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pojištěnci</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h2>Naše Pojišťovna</h2>
+      <ul>
+        <li><a href="index.html">Zpět</a></li>
+        <li><a class="active" href="pojistenci.html">Pojištěnci</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section>
+    <h2>Pojištěnci</h2>
+    
+    <table id="pojistenecTable">
+      <thead>
+        <tr>
+          <th>Jméno</th>
+          <th>Příjmení</th>
+          <th>Ulice</th>
+          <th>Č.P.</th>
+          <th>Město</th>
+          <th>PSČ</th>
+          <th>E-mail</th>
+          <th>Telefon</th>
+        </tr>
+      </thead>
+      <tbody id="pojistenecTableBody">
+      </tbody>
+    </table>
+
+    <h2>Přidat Pojištěnce</h2>
+    <form id="pridatPojistence">
+      <input type="text" id="jmeno" placeholder="Jméno" required>
+      <input type="text" id="prijmeni" placeholder="Příjmení" required>
+      <input type="text" id="ulice" placeholder="Ulice" required>
+      <input type="text" id="cisloPopisne" placeholder="Číslo Popisné" required>
+      <input type="text" id="mesto" placeholder="Město" required>
+      <input type="text" id="psc" placeholder="PSČ" required>
+      <input type="text" id="email" placeholder="E-mail" required>
+      <input type="text" id="telefon" placeholder="Telefon" required>
+      <button id="pridatPojistenecButton">Přidat pojištěnce</button>
+    </form>
+
+  </section>
+
+  <script src="js/Pojistenci.js"></script>
+  <script src="js/Pojistenec.js"></script>
+  <script src="js/Pojisteni.js"></script>
+  <script src="js/obsluha.js"></script>
+</body>
+</html>
