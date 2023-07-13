@@ -120,4 +120,20 @@
   #pridatPojistence button:hover {
     background-color: #038857;
   }
+
+  #pojistenecTable button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #pojistenecTable button:hover {
+    background-color: #038857;
+  }
   
