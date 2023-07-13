@@ -2,6 +2,11 @@
 
 class Pojistenci {
   constructor(jazyk = "cs-CZ") {
+    // Konstruktor třídy Pojistenci
+    // Inicializuje objekt Pojistenci s výchozím jazykem (pokud není specifikován)
+    // Načítá záznamy ze Storage nebo vytváří nové prázdné pole záznamů
+    // Nastavuje odkazy na vstupní prvky formuláře a tlačítko pro přidání pojištěnce
+    // Přidává posluchače událostí na tlačítko pro přidání pojištěnce
     const zaznamyZeStorage = localStorage.getItem("zaznamy");
     this.zaznamy = zaznamyZeStorage ? JSON.parse(zaznamyZeStorage) : [];
     this.jazyk = jazyk;
@@ -17,6 +22,11 @@ class Pojistenci {
     this.pridatPojistenecButton = document.getElementById("pridatPojistenecButton");
 
     this.pridatPojistenecButton.addEventListener("click", (event) => {
+      // Metoda pro přidání nového pojištěnce
+      // Získá hodnoty z vstupních polí formuláře
+      // Vytvoří nový objekt Pojistenec s těmito hodnotami
+      // Přidá nový záznam do pole záznamů a aktualizuje tabulku
+      // Vymaže hodnoty vstupních polí formuláře
       event.preventDefault();
 
       const jmeno = this.jmenoInput.value;
@@ -54,6 +64,10 @@ class Pojistenci {
   }
 
   vytvorTabulku() {
+    // Metoda pro vytvoření tabulky záznamů pojištěnců
+    // Vybere prvek tabulky z DOM
+    // Vytvoří řádky a sloupce pro každý záznam pojištěnce a přidá je do tabulky
+
     const tableBody = document.getElementById("pojistenecTableBody");
     tableBody.innerHTML = "";
   
@@ -123,6 +137,11 @@ class Pojistenci {
   }
   
   upravitPojistence(index, row) {
+    // Metoda pro úpravu záznamu pojištěnce
+    // Získá objekt pojištěnce na základě indexu z pole záznamů
+    // Nahradí buňky v řádku vstupními poli pro editaci údajů pojištěnce
+    // Skryje tlačítko "Upravit" a zobrazí tlačítko "Potvrdit změny"
+
     const pojistenec = this.zaznamy[index];
   
     const jmenoCell = row.cells[0];
@@ -191,6 +210,11 @@ class Pojistenci {
   }
   
   potvrditZmeny(index, row) {
+    // Metoda pro potvrzení změn v záznamu pojištěnce
+    // Získá objekt pojištěnce na základě indexu z pole záznamů
+    // Nahradí buňky v řádku aktualizovanými údaji pojištěnce
+    // Skryje tlačítko "Potvrdit změny" a zobrazí tlačítko "Upravit"
+
     const pojistenec = this.zaznamy[index];
   
     const jmenoInput = row.cells[0].querySelector("input");
@@ -233,6 +257,9 @@ class Pojistenci {
   }
   
   odstranitPojistence(index) {
+    // Metoda pro odstranění záznamu pojištěnce
+    // Odstraní záznam na základě indexu z pole záznamů
+    // Aktualizuje tabulku
     this.zaznamy.splice(index, 1);
     this.vytvorTabulku();
   }
